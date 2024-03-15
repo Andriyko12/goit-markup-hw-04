@@ -61,6 +61,7 @@ address {
 /* ===Header=== */
 .header {
 	border-bottom: 1px solid #e7e9fc;
+	box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 2px 1px 0 rgba(46, 47, 66, 0.08);
 }
 
 .header-container {
@@ -143,6 +144,7 @@ address {
 	line-height: 1.5;
 	letter-spacing: 0.02em;
 	color: #434455;
+	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .address-link:hover,
@@ -161,6 +163,8 @@ address {
 		url(../images/order-service-bg.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
+	background-position: center;
+	max-width: 1440p
 }
 
 .order-service-title {
@@ -190,6 +194,7 @@ address {
 	padding: 16px 32px;
 	box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
 	margin: 0 auto;
+	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .order-service-btn:hover,
@@ -210,9 +215,12 @@ address {
 .about-item-svg-wrap {
 	border: 1px solid #8e8f99;
 	border-radius: 4px;
-	padding: 24px 100px;
 	background: #f4f4fd;
 	margin-bottom: 8px;
+	height: 112px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .about-item-svg {}
@@ -286,20 +294,31 @@ address {
 
 .team-item-svg-list {
 	display: flex;
-	justify-content: space-between;
-	padding-left: 16px;
-	padding-right: 16px;
+	justify-content: center;
+	gap: 24px;
 	margin-top: 8px;
+
 }
 
 .team-item-svg-wrap {
 	width: 40px;
 	height: 40px;
+}
+
+.team-item-svg-link {
+	width: 100%;
+	height: 100%;
 	background-color: #4d5ae5;
-	border-radius: 100%;
+	border-radius: 50%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.team-item-svg-link:hover,
+.team-item-svg-link:focus {
+	background-color: #404bbf
 }
 
 .team-item-svg {
@@ -336,11 +355,15 @@ address {
 
 .portfolio-item {
 	width: calc((100% - 48px) / 3);
+	transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-item:hover {
 	box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
 }
 
 .portfolio-item:hover .portfolio-img-text{
-	transform: translateY(0);
+	transform: translateY(0%);
 }
 
 .portfolio-img-wrap {
@@ -358,9 +381,9 @@ address {
 	top: 0;
 	background: #4d5ae5;
 	height: 100%;
-	padding: 40px 32px 164px 32px;
+	padding: 40px 32px;
 	transform: translateY(100%);
-	transition: transform 350ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-item-title {
@@ -388,6 +411,7 @@ address {
 
 .footer-container {
 	display: flex;
+	align-items: baseline
 }
 
 .footer-prime-wrap {
@@ -436,11 +460,22 @@ address {
 .footer-item-svg-wrap {
 	width: 40px;
 	height: 40px;
+}
+
+.footer-item-svg-link {
 	background-color: #4d5ae5;
-	border-radius: 100%;
+	border-radius: 50%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	width: 100%;
+	height: 100%;
+	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-item-svg-link:hover,
+.footer-item-svg-link:focus {
+	background-color: #31d0aa;
 }
 
 .footer-item-svg {
